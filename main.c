@@ -32,7 +32,18 @@ void drawRectangle(int x, int y, int width, int height) {
             if (i == y || i == y + height - 1 ||
                 j == x || j == x + width - 1) {
                 canvas[i][j] = '*';
+                
             }
+            
+        }
+    }
+}
+void drawLine(int x1, int y1, int x2, int y2) {
+    int x;
+
+    if (y1 == y2) {
+        for (x = x1; x <= x2; x++) {
+            canvas[y1][x] = '-';
         }
     }
 }
@@ -49,6 +60,7 @@ int main() {
         printf("2. Display Canvas\n");
         printf("3. Clear Canvas\n");
         printf("4. Exit\n");
+        printf("5. Draw Line\n");
         printf("Enter Choice: ");
         scanf("%d", &choice);
 
