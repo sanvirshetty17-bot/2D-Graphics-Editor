@@ -58,6 +58,19 @@ void drawCircle(int cx, int cy, int r)
         }
     }
 }
+void drawTriangle(int x, int y, int height)
+{
+    for(int i = 0; i < height; i++)
+    {
+        canvas[y + i][x - i] = '*';
+        canvas[y + i][x + i] = '*';
+    }
+
+    for(int j = x - height + 1; j <= x + height - 1; j++)
+    {
+        canvas[y + height - 1][j] = '*';
+    }
+}
 void drawLine(int x1, int y1, int x2, int y2) {
     int x;
 
@@ -82,6 +95,7 @@ int main() {
         printf("4. Exit\n");
         printf("5. Draw Line\n");
         printf("6. Draw Circle\n");
+        printf("7. Draw Triangle\n");
         printf("Enter Choice: ");
         scanf("%d", &choice);
 
@@ -130,6 +144,18 @@ case 6:
     drawCircle(cx, cy, r);
 
     printf("Circle Added!\n");
+    break;
+}
+case 7:
+{
+    int tx, ty, h;
+
+    printf("Enter x y height: ");
+    scanf("%d %d %d", &tx, &ty, &h);
+
+    drawTriangle(tx, ty, h);
+
+    printf("Triangle Added!\n");
     break;
 }
             default:
