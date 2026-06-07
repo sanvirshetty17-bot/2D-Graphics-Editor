@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define ROWS 20
 #define COLS 50
@@ -38,6 +40,24 @@ void drawRectangle(int x, int y, int width, int height) {
         }
     }
 }
+void drawCircle(int cx, int cy, int r)
+{
+    for (int y = 0; y < ROWS; y++)
+    {
+        for (int x = 0; x < COLS; x++)
+        {
+            int dx = x - cx;
+            int dy = y - cy;
+
+            int dist = dx * dx + dy * dy;
+
+            if (abs(dist - r * r) <= r)
+            {
+                canvas[y][x] = '*';
+            }
+        }
+    }
+}
 void drawLine(int x1, int y1, int x2, int y2) {
     int x;
 
@@ -61,6 +81,7 @@ int main() {
         printf("3. Clear Canvas\n");
         printf("4. Exit\n");
         printf("5. Draw Line\n");
+        printf("6. Draw Circle\n");
         printf("Enter Choice: ");
         scanf("%d", &choice);
 
@@ -99,7 +120,18 @@ int main() {
     printf("Line Added!\n");
     break;
 }
+case 6:
+{
+    int cx, cy, r;
 
+    printf("Enter center x y and radius: ");
+    scanf("%d %d %d", &cx, &cy, &r);
+
+    drawCircle(cx, cy, r);
+
+    printf("Circle Added!\n");
+    break;
+}
             default:
                 printf("Invalid Choice!\n");
         }
