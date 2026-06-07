@@ -87,6 +87,18 @@ int main() {
             case 4:
                 printf("Exiting...\n");
                 break;
+            case 5:
+{
+    int x1, y1, x2, y2;
+
+    printf("Enter x1 y1 x2 y2: ");
+    scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+    drawLine(x1, y1, x2, y2);
+
+    printf("Line Added!\n");
+    break;
+}
 
             default:
                 printf("Invalid Choice!\n");
