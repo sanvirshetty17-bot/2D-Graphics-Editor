@@ -100,6 +100,7 @@ int triangleH = 0;
         printf("6. Draw Circle\n");
         printf("7. Draw Triangle\n");
         printf("8.Move Triangle\n");
+        printf("9. Delete Triangle\n");
         printf("Enter Choice: ");
         scanf("%d", &choice);
 
@@ -175,6 +176,17 @@ case 8:
     drawTriangle(triangleX, triangleY, triangleH);
 
     printf("Triangle Moved!\n");
+    break;
+}
+case 9:
+{
+    clearCanvas();
+
+    triangleX = 0;
+    triangleY = 0;
+    triangleH = 0;
+
+    printf("Triangle Deleted!\n");
     break;
 }
             default:
