@@ -85,6 +85,9 @@ int main() {
     int choice;
     int x, y, width, height;
 
+int triangleX = 0;
+int triangleY = 0;
+int triangleH = 0;
     clearCanvas();
 
     do {
@@ -96,6 +99,7 @@ int main() {
         printf("5. Draw Line\n");
         printf("6. Draw Circle\n");
         printf("7. Draw Triangle\n");
+        printf("8.Move Triangle\n");
         printf("Enter Choice: ");
         scanf("%d", &choice);
 
@@ -153,9 +157,24 @@ case 7:
     printf("Enter x y height: ");
     scanf("%d %d %d", &tx, &ty, &h);
 
+triangleX = tx;
+triangleY = ty;
+triangleH = h;
     drawTriangle(tx, ty, h);
 
     printf("Triangle Added!\n");
+    break;
+}
+case 8:
+{
+    printf("Enter new X and Y position: ");
+    scanf("%d %d", &triangleX, &triangleY);
+
+    clearCanvas();
+
+    drawTriangle(triangleX, triangleY, triangleH);
+
+    printf("Triangle Moved!\n");
     break;
 }
             default:
