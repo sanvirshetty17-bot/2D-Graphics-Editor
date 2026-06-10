@@ -1,1 +1,152 @@
-fgh
+Good. Installing Git was the first setup step. Now for your 2D Graph Editor mini project, you need to connect your local project to GitHub and start making daily commits.
+
+Typical workflow
+1. Create a GitHub repository
+
+On GitHub:
+
+Click New Repository
+Name it something like 2d-graph-editor
+Create it
+
+GitHub will show commands similar to these.
+
+2. Open terminal in your project folder
+
+Example:
+
+cd path/to/your/project
+3. Initialize Git (only once)
+git init
+4. Add all project files
+git add .
+5. Make your first commit
+git commit -m "Initial project setup"
+6. Connect to GitHub repository
+
+Replace with your repository URL:
+
+git remote add origin https://github.com/yourusername/2d-graph-editor.git
+7. Push code
+git branch -M main
+git push -u origin main
+Daily workflow
+
+Whenever you make changes:
+
+git add .
+git commit -m "Added node creation feature"
+git push
+
+Next day:
+
+git add .
+git commit -m "Implemented edge drawing"
+git push
+
+And so on.
+
+For your mini project
+
+A reasonable progression might be:
+
+Day 1
+
+Project setup
+Canvas/window
+
+Day 2
+
+Create graph nodes
+
+Day 3
+
+Move nodes
+
+Day 4
+
+Draw edges between nodes
+
+Day 5
+
+Delete nodes/edges
+
+Day 6
+
+Save graph
+
+Day 7
+
+Load graph
+
+Day 8
+
+UI improvements
+
+Each day, commit and push your work.
+
+Check if you're ready
+
+Tell me:
+
+What language/framework are you using? (Java Swing, JavaFX, C++, Python, React, etc.)
+Have you already created the GitHub repository?
+
+I can then give you the exact commands for your setup.
+
+all done even created a github folder named 2D graph editior
+
+
+Developed a menu-driven 2D Graphics Editor in C using a 2D character array. The editor allows users to create and manage simple graphical objects using * and _ characters.
+Features Implemented
+Canvas Management
+Created a 2D character canvas.
+Implemented canvas initialization.
+Implemented canvas clearing functionality.
+Implemented canvas display functionality.
+Shape Drawing
+Rectangle Drawing
+Draw rectangles using user-provided coordinates, width, and height.
+Line Drawing
+Draw horizontal and vertical lines.
+Triangle Drawing
+Draw triangles using character-based graphics.
+Circle Drawing
+Draw circles using a simple circle-drawing algorithm.
+Object Operations
+Add objects to the canvas.
+Delete objects from the canvas.
+Modify existing objects by updating their dimensions and position.
+User Interface
+Menu-driven console application.
+User-friendly options for drawing and managing shapes.
+Technologies Used
+Programming Language: C
+Data Structure: 2D Character Array
+Version Control: Git & GitHub
+Development Progress
+Day 1
+Created GitHub repository.
+Implemented canvas creation.
+Implemented display and clear canvas functions.
+Added rectangle drawing functionality.
+Tested and pushed code to GitHub.
+Day 2
+Added line drawing functionality.
+Updated menu options.
+Tested and pushed code to GitHub.
+Day 3
+Added triangle drawing functionality.
+Improved shape rendering.
+Tested and pushed code to GitHub.
+Day 4
+Added circle drawing functionality.
+Optimized drawing logic.
+Tested and pushed code to GitHub.
+Day 5
+Implemented add, delete, and modify object features.
+Performed final testing and bug fixes.
+Updated project documentation.
+Completed and pushed final version to GitHub.
+Outcome
+Successfully developed a functional 2D Graphics Editor capable of drawing and managing multiple graphical objects using character-based rendering in C.
